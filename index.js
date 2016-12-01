@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 "use strict";
 var TileGrinder = require('tilegrinder');
-var argv = require('minimist')(process.argv.slice(2));
 var program = require('commander');
 
 program

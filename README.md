@@ -4,21 +4,24 @@ Remove vector tile layers from MBTiles.
 
 ## Install
 
-```
+```bash
 # not published to npm yet
 npm install layerfilter
 ```
 
 ## Usage
 
-Use layerfilter to trim down large MBTiles so they suit exactly your needs!
+Use **layerfilter** to trim down large MBTiles so they suit exactly your needs!
 
-```
-layerfilter -i openmaptiles.mbtiles -l "water,place,boundary" -o openmaptiles_mobile.mbtiles
+```bash
+layerfilter -l "water,place,boundary" -i openmaptiles.mbtiles -o openmaptiles_mobile.mbtiles
 ```
 
 Or use Docker.
 
-```
-docker run --rm -v $(pwd):/mbtiles openmaptiles/layerfilter layerfilter -i /mbtiles/openmaptiles.mbtiles -l "water,place,boundary" -o /mbtiles/openmaptiles_mobile.mbtiles
+```bash
+docker run --rm -v $(pwd):/mbtiles openmaptiles/layerfilter layerfilter \
+  -l "water,place,boundary" \
+  -i /mbtiles/openmaptiles.mbtiles \
+  -o /mbtiles/openmaptiles_mobile.mbtiles
 ```
